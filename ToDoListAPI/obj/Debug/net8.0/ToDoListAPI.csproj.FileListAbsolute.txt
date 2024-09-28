@@ -1,0 +1,8 @@
+/workspaces/TodoList/ToDoListAPI/obj/Debug/net8.0/ToDoListAPI.csproj.AssemblyReference.cache
+/workspaces/TodoList/ToDoListAPI/obj/Debug/net8.0/ToDoListAPI.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/TodoList/ToDoListAPI/obj/Debug/net8.0/ToDoListAPI.AssemblyInfoInputs.cache
+/workspaces/TodoList/ToDoListAPI/obj/Debug/net8.0/ToDoListAPI.AssemblyInfo.cs
+/workspaces/TodoList/ToDoListAPI/obj/Debug/net8.0/ToDoListAPI.csproj.CoreCompileInputs.cache
+/workspaces/TodoList/ToDoListAPI/obj/Debug/net8.0/ToDoListAPI.MvcApplicationPartsAssemblyInfo.cs
+/workspaces/TodoList/ToDoListAPI/obj/Debug/net8.0/ToDoListAPI.MvcApplicationPartsAssemblyInfo.cache
+/workspaces/TodoList/ToDoListAPI/obj/Debug/net8.0/ToDoListAPI.sourcelink.json
