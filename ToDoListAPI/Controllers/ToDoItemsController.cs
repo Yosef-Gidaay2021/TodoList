@@ -24,18 +24,18 @@ namespace TodoListAPI.Controllers
         public async Task<ActionResult<IEnumerable<ToDoItem>>> GetIncompleteToDoItems()
         {
             // Fetch all ToDoItems where CompletedDate is null
-            var incompleteToDoItems = await _context.ToDoItems
+            var incompleteToDoItems = await _context.TodoItems
                 .Where(t => t.CompletedDate == null)
                 .ToListAsync();
 
             return Ok(incompleteToDoItems);
         }
 
-        // Get a specific ToDoItem by Id
+        // Get a ToDoItem by Id
         [HttpGet("{id}")]
         public async Task<ActionResult<ToDoItem>> GetToDoItemById(long id)
         {
-            var toDoItem = await _context.ToDoItems.FindAsync(id);
+            var toDoItem = await _context.TodoItems.FindAsync(id);
 
             if (toDoItem == null)
             {
@@ -49,7 +49,7 @@ namespace TodoListAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<ToDoItem>> CreateToDoItem(ToDoItem toDoItem)
         {
-            _context.ToDoItems.Add(toDoItem);
+            _context.TodoItems.Add(toDoItem);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetToDoItemById), new { id = toDoItem.Id }, toDoItem);
@@ -64,7 +64,7 @@ namespace TodoListAPI.Controllers
                 return BadRequest();
             }
 
-            var itemToUpdate = await _context.ToDoItems.FindAsync(id);
+            var itemToUpdate = await _context.TodoItems.FindAsync(id);
             if (itemToUpdate == null)
             {
                 return NotFound();
@@ -78,17 +78,17 @@ namespace TodoListAPI.Controllers
             return NoContent();
         }
 
-         // Delete a specific ToDoItem by Id
+         // Delete a ToDoItem by Id
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteToDoItem(long id)
         {
-            var toDoItem = await _context.ToDoItems.FindAsync(id);
+            var toDoItem = await _context.TodoItems.FindAsync(id);
             if (toDoItem == null)
             {
                 return NotFound();
             }
 
-            _context.ToDoItems.Remove(toDoItem);
+            _context.TodoItems.Remove(toDoItem);
             await _context.SaveChangesAsync();
 
             return NoContent();

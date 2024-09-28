@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TodoListAPI.Data;
-//using TodoListAPI.Models;
+using TodoListAPI.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
